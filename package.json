@@ -1,0 +1,21 @@
+{
+  "name": "unikwan",
+  "version": "1.0.0",
+  "description": "My luminous Nuxt.js project",
+  "author": "Nit35h",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "firebase": "^6.4.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@mdi/font": "^4.1.95",
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}

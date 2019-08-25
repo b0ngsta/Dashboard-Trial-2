@@ -1,0 +1,169 @@
+<v-navigation-drawer
+      v-model="drawer"
+      fixed
+      app
+    >
+    <div>
+       
+      <v-layout>
+      <v-img src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="170">
+          <v-avatar size="99" class="ma-3">
+                 <img
+                  src="https://cdn.vuetifyjs.com/images/john.jpg"
+                  alt="John"
+                  >
+           </v-avatar>
+           <p class="ma-3">Susas U.</p>
+       </v-img>
+    </v-layout>
+    
+    </div>
+    
+      <v-list>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+        >
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+
+
+
+
+
+
+
+
+
+
+    <v-container>
+       <v-layout row>
+         <v-flex md3>
+              <div>
+       
+      <v-layout>
+      <v-img src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="170">
+          <v-avatar size="99" class="ma-3">
+                 <img
+                  src="https://cdn.vuetifyjs.com/images/john.jpg"
+                  alt="John"
+                  >
+           </v-avatar>
+           <p class="ma-3">Susas U.</p>
+       </v-img>
+    </v-layout>
+    
+    </div>
+    
+      <v-list>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+        >
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+         </v-flex>
+       </v-layout>
+     </v-container>
+    desserts: [
+          {
+            ID: 345,
+             Payment:  lorem,
+            Company: 'Frozen Yogurt',
+            calories: 159,
+          },
+          { ID: 345,
+            Payment: lorem,
+            Company: 'Ice cream sandwich',
+            calories: 237,
+          },
+          {ID: 345,
+            Payment: lorem,
+            Company: 'Eclair',
+            calories: 262,
+          },
+          { ID: 345,
+            Payment: lorem,
+            Company: 'Cupcake',
+            calories: 305,
+          },
+          {ID: 345,
+            Payment: lorem,
+            Company: 'Gingerbread',
+            calories: 356,
+          },
+          {ID: 345,
+            Payment: lorem,
+            Company: 'Jelly bean',
+            calories: 375,
+          },
+          {ID: 345,
+            Payment: lorem,
+            Company: 'Lollipop',
+            calories: 392,
+          },
+          {ID: 345,
+            Payment: lorem,
+            Company: 'Honeycomb',
+            calories: 408,
+          },
+          {ID: 345,
+            Payment: Debit,
+            Company: 'Donut',
+            calories: 452,
+          },
+          { ID: 345,
+            Payment: Paytm,
+            Company: 'KitKat',
+            calories: 518,
+          },
+        ],
+
+
+
+
+
+
+
+
+         <v-simple-table dark>
+    <thead>
+      <tr>
+        <th class="text-left">ID</th>
+        <th class="text-left">Payment Type</th>
+        <th class="text-left">Company</th>
+        <th class="text-left">Date</th>
+        <th class="text-left">Progress</th>
+        <th class="text-left">Total</th>
+      </tr>  </thead>
+    <tbody>
+      <tr v-for="iteo in desserts" :key="iteo.name">
+        <td>{{ iteo.ID }}</td>
+        <td>{{ iteo.Payment }}</td>
+        <td>{{ iteo.Company }}</td>
+        <td>{{ iteo.Date }}</td>
+        <td>{{ iteo.Progress }}</td>
+        <td>{{ iteo.Total }}</td>
+      </tr>
+    </tbody>
+  </v-simple-table>
