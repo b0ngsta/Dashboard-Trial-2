@@ -1,28 +1,29 @@
 <template>
-  
-  <v-app>
+ <v-app>
      <v-layout row>
          <v-flex md2>
       <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
-         <v-card class="mx-auto"
-    max-width="600"
-    height="670"
-    tile>
-        
-           <v-list>
+          <v-hover v-slot:default="{ hover }">
+         <v-card 
+            :elevation="hover ? 12 : 2"
+            class="mx-auto"
+            max-width="600"
+            height="670"
+            tile>
+         <v-list>
         <v-list-item
           v-for="(item, i) in items"
           :key="i"
@@ -45,81 +46,41 @@
      <p>
        <span class=" ml-6 primary--text font-weight-black">Privacy</span> <span class="font-weight-black" >&</span> <span class="primary--text font-weight-black">Terms</span></p></v-col>
          </v-card>
+          </v-hover>
          </v-flex>
          <v-flex md></v-flex>
         <v-flex md6>
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <v-layout column>
+     <v-layout column>
              <v-flex md6>
                 <v-layout>
                   <v-flex md6 class="ma-4">
+                       <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
                  width="600">
                    <v-img src="https://www.statista.com/graphic/1/276601/number-of-world-of-warcraft-subscribers-by-quarter.jpg"></v-img>
                       <v-card-text class="font-weight-black">Real Time Subscriber Count</v-card-text>
                  </v-card>
+                       </v-hover>
                   </v-flex>
                    
                    <v-flex md6 class="ma-4">
+                      <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
                  width="600"
                  height="408">
                    <v-img src="https://www.kreyonmedia.com/post/wp-content/uploads/2018/11/most-popular-youtube-channel.jpg"></v-img>
                        <v-card-text class="font-weight-black">Most Popular</v-card-text>
                  </v-card>
+                      </v-hover>
                   </v-flex>
                 </v-layout>
-
-
              </v-flex>
              <v-flex md6>
-               
-                     <v-card >
+                      <v-hover v-slot:default="{ hover }">
+                     <v-card 
+                     :elevation="hover ? 12 : 2">
                        <v-img height="400" width="800" src="https://www.v-m-d.com/wp-content/uploads/2017/03/personal-template-nice-blank-histogram-graph-central-limit-theorem-pocket-change.png">
                        <v-sparkline
                       :value="value"
@@ -138,6 +99,7 @@
                        </v-img>
                        <v-card-text><p class="headline ">Real-time customer preference graph</p></v-card-text>
                      </v-card>
+                      </v-hover>
                                </v-flex>
                              </v-layout>
 
@@ -206,10 +168,7 @@
 
               </v-img>
                  </v-col>
-                 
-            
-                 
-               </v-layout>
+              </v-layout>
               </v-container>
          </div>
         </v-flex>
@@ -243,16 +202,19 @@ export default {
       drawer: true,
      
       items: [
+        
+        
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Projects',
-          to: '/Projects'
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
+        
         {
           icon: 'mdi-watch',
           title: 'Leaderboard',
@@ -268,26 +230,13 @@ export default {
           title: 'Reports',
           to: '/Reports'
         },
-        {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
+        
         {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
-        },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
         }
+        
       ],
       
       

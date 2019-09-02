@@ -5,22 +5,24 @@
          <v-flex md2>
       <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
+         <v-hover v-slot:default="{ hover }">
          <v-card class="mx-auto"
-    max-width="600"
-    height="670"
-    tile>
+           :elevation="hover ? 12 : 2"       
+           max-width="600"
+           height="670"
+           tile>
         
            <v-list>
         <v-list-item
@@ -45,10 +47,11 @@
      <p>
        <span class=" ml-6 primary--text font-weight-black">Privacy</span> <span class="font-weight-black" >&</span> <span class="primary--text font-weight-black">Terms</span></p></v-col>
          </v-card>
+         </v-hover>
          </v-flex>
          <v-flex md></v-flex>
         <v-flex md6>
-          <p>
+          <p class="amber--text font-weight-medium ma-4">
             Report Overview
             <br>
             Last month with data(December)
@@ -58,8 +61,8 @@
               
                  <v-row>
                    <v-col>
-                
-                <v-card class="ma-2" height="100">
+                <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Visitors</p>
@@ -71,9 +74,9 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
-              
-                <v-card class="ma-2" height="100">
+                </v-hover>
+                <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Visitors</p>
@@ -85,9 +88,9 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
-              
-                <v-card class="ma-2" height="100" >
+                </v-hover>
+                <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Visitors</p>
@@ -99,19 +102,20 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
+                </v-hover>
               </v-col>
-              <v-card height="320" class="mt-4">
+              <v-hover v-slot:default="{ hover }">
+              <v-card height="320" class="mt-4" :elevation="hover ? 12 : 2">
                   <v-img width="600" height="320" src="https://lh5.googleusercontent.com/gj_BGhmCpFlvlhUg67gl0i607uCUyQ8NyvoPwxYy96R2TIVD6n88ti2hrz5NrdEphAVSJ9ocN_r_Kxd9jwGl1ryyHd_nxV-8vUX0K5BRDcrlv1pqK-VstIMYHy_xxVaXQgK4fiI"></v-img>
               </v-card>
-
+              </v-hover>
              </v-row>
             </v-flex>
             <v-flex md6>
               <v-row>
                    <v-col>
-                
-                <v-card class="ma-2" height="100">
+                <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Signup rate</p>
@@ -123,9 +127,9 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
-              
-                <v-card class="ma-2" height="100">
+                </v-hover>
+               <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Paying rate</p>
@@ -137,9 +141,9 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
-              
-                <v-card class="ma-2" height="100" >
+               </v-hover>
+                <v-hover v-slot:default="{ hover }">
+                <v-card class="ma-2" height="100" :elevation="hover ? 12 : 2">
                   <v-row>
                     <v-col>
                       <p class="grey--text mt-4 ml-6">Churn rate</p>
@@ -151,12 +155,13 @@
                     </v-row>
                   </v-row>
                 </v-card>
-        
+                </v-hover>
               </v-col>
-              <v-card height="320" class="mt-4">
+              <v-hover v-slot:default="{ hover }">
+              <v-card height="320" class="mt-4" :elevation="hover ? 12 : 2">
                   <v-img width="600" height="320" src="http://www.webdesigndev.com/wp-content/uploads/2017/07/graph.jpg"></v-img>
               </v-card>
-
+              </v-hover>
              </v-row>
                
             </v-flex>
@@ -248,16 +253,19 @@ export default {
       drawer: true,
      
       items: [
+        
+        
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Projects',
-          to: '/Projects'
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
+        
         {
           icon: 'mdi-watch',
           title: 'Leaderboard',
@@ -274,24 +282,9 @@ export default {
           to: '/Reports'
         },
         {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
-        {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
-        },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
         }
       ],
       

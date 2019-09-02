@@ -4,19 +4,21 @@
          <v-flex md2>
       <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
+         <v-hover v-slot:default="{ hover }">
          <v-card class="mx-auto"
+         :elevation="hover ? 12 : 2"
     max-width="600"
     height="670"
     tile>
@@ -40,6 +42,7 @@
      <p>
        <span class="ml-6 primary--text font-weight-black">Privacy</span> <span class="font-weight-black" >&</span> <span class="primary--text font-weight-black">Terms</span></p></v-col>
          </v-card>
+         </v-hover>
          </v-flex>
          <v-flex md></v-flex>
         <v-flex md6>
@@ -47,7 +50,9 @@
              <v-flex md4>
                 <v-layout>
                   <v-flex md4 class="mt-4">
+                    <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
     class="mx-auto"
     color="#26c6da"
     dark
@@ -93,9 +98,12 @@
       </v-list-item>
     </v-card-actions>
   </v-card>
+                    </v-hover>
                   </v-flex>
                    <v-flex md4 class="ma-4">
+                     <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
     class="mx-auto"
     color="#26c6da"
     dark
@@ -141,29 +149,32 @@
       </v-list-item>
     </v-card-actions>
   </v-card>
+                     </v-hover>
                   </v-flex>
                    <v-flex md4 class="mt-4">
+                     <v-hover v-slot:default="{ hover }">
                       <v-card
-    class="mx-auto"
-    color="#26c6da"
-    dark
-    max-width="300"
+                      :elevation="hover ? 12 : 2"
+                     class="mx-auto"
+                     color="#26c6da"
+                     dark
+                     max-width="300"
     
-  >
-    <v-card-title>
-      <v-icon
-        large
-        left
-      >
-        mdi-twitter
-      </v-icon>
-      <span class="title font-weight-light">Twitter</span>
-    </v-card-title>
-
-    <v-card-text class=" font-weight-bold">
-      "Lorem ipsum dolor sit amet,  equidem est. Sed in error hendrerit, in consul constituam cum."
-    </v-card-text>
-
+                >
+                  <v-card-title>
+                    <v-icon
+                      large
+                      left
+                    >
+                      mdi-twitter
+                    </v-icon>
+                    <span class="title font-weight-light">Twitter</span>
+                  </v-card-title>
+              
+                  <v-card-text class=" font-weight-bold">
+                    "Lorem ipsum dolor sit amet,  equidem est. Sed in error hendrerit, in consul constituam cum."
+                  </v-card-text>
+    
     <v-card-actions>
       <v-list-item class="grow">
         <v-list-item-avatar color="grey darken-3">
@@ -189,6 +200,7 @@
       </v-list-item>
     </v-card-actions>
   </v-card>
+                     </v-hover>
                   </v-flex>
                 </v-layout>
 
@@ -506,16 +518,19 @@ export default {
     
      
       items: [
+        
+        
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Projects',
-          to: '/Projects'
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
+       
         {
           icon: 'mdi-watch',
           title: 'Leaderboard',
@@ -532,24 +547,9 @@ export default {
           to: '/Reports'
         },
         {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
-        {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
-        },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
         }
       ],
       

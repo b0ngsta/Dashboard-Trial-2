@@ -4,22 +4,22 @@
          <v-flex md2>
       <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
          <v-card class="mx-auto"
-    max-width="600"
-    height="670"
-    tile>
+             max-width="600"
+             height="670"
+             tile>
           <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -47,30 +47,10 @@
          <v-flex md></v-flex>
         <v-flex md6>
           <p class="display-1 blue--text">Projects:</p>
-          <v-expansion-panels>
-    <v-expansion-panel
-      v-for="test in tests" :key="test.name"
-      class="nitu"
-    >
-      <v-expansion-panel-header>{{ test.name }}</v-expansion-panel-header>
-      <v-expansion-panel-content>
-         <v-card>
-                     <v-card-text class="px-4 grey--text ">
-                       
-                       <p><span class="font-weight-black title"> Project's ID:</span>
-                       <span> {{ test.id }}</span> </p>
-                       <p><span class="font-weight-black title"> Projects's Status:</span>
-                       <span>  {{ test.status }}</span> </p>
-                      <p><span class="font-weight-black title">Projects's details:</span>
-                       <span>  {{ test.details }}</span> </p>
-                     
-                       
-                     </v-card-text>
-                   </v-card>
-      </v-expansion-panel-content>
-    </v-expansion-panel>
-  </v-expansion-panels>
-      <div class="pa-5" ><Employeo /></div>
+          <div>
+            <app-hello-world @addEd='newQuote'></app-hello-world> 
+           <app-quote-grid :quotes="quotes" ></app-quote-grid>
+          </div>
         </v-flex>
         <v-flex md></v-flex>
         <v-flex md2>
@@ -148,21 +128,34 @@
 </template>
 
 <script>
-import Employeo from '~/components/Employeo.vue'
-import db from '~/fb'
+
+import QuoteGrid from '~/components/QuoteGrid.vue';
+import HelloWorld from '~/components/HelloWorld.vue';
+
 export default {
-  components: { Employeo },
+  components:{
+     appQuoteGrid: QuoteGrid,
+     appHelloWorld: HelloWorld,
+     
+   },
   data () {
     return {
-      tests: [  
+      quotes: [  
         ],
       drawer: true,
      
       items: [
+        
+        
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
+        },
+        {
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
         {
           icon: 'mdi-chart-bubble',
@@ -185,43 +178,32 @@ export default {
           to: '/Reports'
         },
         {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
-        {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
-        },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
         }
       ],
       
+   methods:{
+     newQuote(quote){
+       
+       if(quote.status=='' || quote.details =='' || quote.name =='' )return
+             
+        else{this.quotes.push(
+           quotes = {
+             name: this.name, 
+              id: this.id, 
+              address: this.address, 
+              salary: this.salary
+        
+        }
+        )
+     }
+   }
+      
       
     }
-  },
-  created(){
-    db.collection('tests').onSnapshot(res => {
-      const changes = res.docChanges();
-      changes.forEach(change => {
-        if(change.type === 'added')
-        {
-          this.tests.push({
-            ...change.doc.data(),
-            id: change.doc.id
-          })
-        }
-      })
-    })
   }
+}
 }
 </script>

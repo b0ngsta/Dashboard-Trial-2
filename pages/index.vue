@@ -4,19 +4,21 @@
         <v-flex md2>
          <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
+         <v-hover v-slot:default="{ hover }">
          <v-card class="mx-auto"
+         :elevation="hover ? 12 : 2"
     max-width="600"
     height="670"
     tile>
@@ -41,10 +43,11 @@
       <v-divider />
         
       
-     <v-col> <p class="mt-6 ml-6 font-weight-black">Unikwan<span class="ml-1 font-weight-black">&copy;</span></p>
+     <v-col> <p class="mt-6 ml-6 font-weight-black">God Like<span class="ml-1 font-weight-black">&copy;</span></p>
      <p>
        <span class=" ml-6 primary--text font-weight-black">Privacy</span> <span class="font-weight-black" >&</span> <span class="primary--text font-weight-black">Terms</span></p></v-col>
          </v-card>
+         </v-hover>
         </v-flex>
         <v-flex md></v-flex>
         <v-flex md6>
@@ -52,7 +55,9 @@
              <v-flex md4>
                 <v-layout>
                   <v-flex md4 class="mt-4">
+                    <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
                         max-width="1200"
                         class="mx-auto" >
                         <v-img src="https://www.drupal.org/files/nodes-per-month.png" >
@@ -76,20 +81,18 @@
        
                          
                         </v-card>
+                    </v-hover>
                   </v-flex>
                    <v-flex md4 class="ma-4">
+                     <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
                         max-width="1200"
                         class="mx-auto" >
                         <v-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzPMDVYGPxrM1s-BZJZQ4z4DYHzVLv4mrzyDLuzgw8ulQmd3ty" >
                            <v-layout row>
                              <v-flex md6> <v-card-title><p class="ml-4">Views</p></v-card-title></v-flex>
-                           <v-flex md6><v-chip
-                              class="ma-4"
-                              color="primary"
-                            >
-                              Gross
-                            </v-chip></v-flex>
+                           <v-flex md6><v-icon class="mt-8 ml-12">mdi-dots-vertical</v-icon></v-flex>
 
                           </v-layout>
                         
@@ -100,30 +103,30 @@
                           </v-card-actions>
                              </v-img>
                         </v-card>
+                        </v-hover>
                   </v-flex>
                    <v-flex md4 class="mt-4">
+                     <v-hover v-slot:default="{ hover }">
                       <v-card
+                      :elevation="hover ? 12 : 2"
                         max-width="1200"
                         class="mx-auto" >
                         <v-img  src="https://i.stack.imgur.com/lm7Ou.png" >
                            <v-layout row>
                              <v-flex md6> <v-card-title><p class="ml-4">Reports</p></v-card-title></v-flex>
-                           <v-flex md6><v-chip
-                              class="ma-4"
-                              color="primary"
-                            >
-                              Gross
-                            </v-chip></v-flex>
+                           <v-flex md6><v-icon class="mt-8 ml-12">mdi-alien</v-icon></v-flex>
                          </v-layout>
                          <v-card-text><p class="display-2">23,196</p> <p>Last week</p></v-card-text>
                          <v-card-actions>
                            </v-card-actions>
                              </v-img>
                         </v-card>
+                     </v-hover>
                   </v-flex>
                 </v-layout>
               </v-flex>
              <v-flex md8>
+               
               <v-simple-table>
     <thead>
       <tr>
@@ -292,16 +295,18 @@ export default {
         ],
      
       items: [
+        
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Projects',
-          to: '/Projects'
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
+        
         {
           icon: 'mdi-watch',
           title: 'Leaderboard',
@@ -317,26 +322,14 @@ export default {
           title: 'Reports',
           to: '/Reports'
         },
-        {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
+        
         {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
         },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
-        }
+        
+        
       ],
       
       

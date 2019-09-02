@@ -167,3 +167,150 @@
       </tr>
     </tbody>
   </v-simple-table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <v-sparkline
+    :value="value"
+    :gradient="gradient"
+    :smooth="radius || false"
+    :padding="padding"
+    :line-width="width"
+    :stroke-linecap="lineCap"
+    :gradient-direction="gradientDirection"
+    :fill="fill"
+    :type="type"
+    :auto-line-width="autoLineWidth"
+    auto-draw
+  ></v-sparkline>
+  <div>
+             <v-layout row>
+               
+               <v-flex md6 class="ma-4">
+                 <v-card
+                 width="600">
+                   <v-img src="https://www.statista.com/graphic/1/276601/number-of-world-of-warcraft-subscribers-by-quarter.jpg"></v-img>
+                      <v-card-text class="font-weight-black">Real Time Subscriber Count</v-card-text>
+                 </v-card>
+               </v-flex>
+               
+               <v-flex md6 class="ma-4"><v-card
+                 width="600"
+                 height="408">
+                   <v-img src="https://www.kreyonmedia.com/post/wp-content/uploads/2018/11/most-popular-youtube-channel.jpg"></v-img>
+                       <v-card-text class="font-weight-black">Most Popular</v-card-text>
+                 </v-card></v-flex>
+               
+             </v-layout>
+             </div> 
+
+
+
+
+
+
+
+             <v-card width="700">
+                  <v-img src="https://lh5.googleusercontent.com/gj_BGhmCpFlvlhUg67gl0i607uCUyQ8NyvoPwxYy96R2TIVD6n88ti2hrz5NrdEphAVSJ9ocN_r_Kxd9jwGl1ryyHd_nxV-8vUX0K5BRDcrlv1pqK-VstIMYHy_xxVaXQgK4fiI"></v-img>
+                </v-card>
+
+
+
+         <v-col>
+            <v-row>
+            <p class="ml-12">FIRST NAME:</p>
+            <P class="ml-12">Nitesh</P>
+          </v-row>
+          <v-row>
+            <p class="ml-12"> LAST NAME:</p>
+            <P class="ml-12">Nitesh</P>
+            <P class="ml-12">Poonia</P>
+            <P class="ml-12">Nit35h.7@gmail.com</P>
+            <P class="ml-12">Subscriber</P>
+            <P class="ml-12">Nitesh</P>
+          </v-row><v-row>
+            <p class="ml-12">E-MAIL:</p>
+            <P class="ml-12">Nit35h.7@gmail.com</P>
+          </v-row><v-row>
+            <p class="ml-12">ROLE:</p>
+            
+            
+          </v-row><v-row>
+            <p class="ml-12">Bio:</p>
+            
+          </v-row>
+          <v-row>
+            <p class="ml-12">NICK NAME:</p>
+            <P class="ml-12">Nitesh</P>
+          </v-row>
+          </v-col>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <v-col>
+                <v-flex md4>
+                <v-card class="ma-2" height="100">
+                  <v-row>
+                    <v-col>
+                      <p class="grey--text mt-4 ml-6">Visitors</p>
+                      <p class="font-weight-black headline mt-4 ml-6">5165</p>
+                    </v-col>
+                    <v-row>
+                      <v-icon class="mt-2  ml-3">mdi-arrow-up</v-icon>
+                      <p class="mt-12 ml-3 body-2 light-green--text">27.5% <br>vs last month</p>
+                    </v-row>
+                  </v-row>
+                </v-card>
+              </v-flex>
+              <v-flex md4>
+                <v-card class="ma-2" height="100">
+                  <v-row>
+                    <v-col>
+                      <p class="grey--text mt-4 ml-6">Visitors</p>
+                      <p class="font-weight-black headline mt-4 ml-6">516</p>
+                    </v-col>
+                    <v-row>
+                      <v-icon class="mt-2  ml-3">mdi-arrow-down</v-icon>
+                      <p class="mt-12 ml-3 body-2 red--text">13.3% <br>vs last month</p>
+                    </v-row>
+                  </v-row>
+                </v-card>
+              </v-flex>
+              <v-flex md4>
+                <v-card class="ma-2" height="100" >
+                  <v-row>
+                    <v-col>
+                      <p class="grey--text mt-4 ml-6">Visitors</p>
+                      <p class="font-weight-black headline mt-4 ml-6">58</p>
+                    </v-col>
+                    <v-row>
+                      <v-icon class="mt-2  ml-3">mdi-arrow-up</v-icon>
+                      <p class="mt-12 ml-3 body-2 light-green--text">7.5% <br>vs last month</p>
+                    </v-row>
+                  </v-row>
+                </v-card>
+              </v-flex>
+              </v-col>

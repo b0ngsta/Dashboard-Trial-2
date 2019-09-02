@@ -10,7 +10,7 @@
        <v-layout >
          <v-flex md1><v-app-bar-nav-icon class="mt-9" @click.stop="drawer = !drawer" /></v-flex>
          <v-flex md2> 
-     <v-toolbar-title><p class="mt-10">UNIKWAN</p></v-toolbar-title>
+     <v-toolbar-title><p class="mt-10">GOD LIKE</p></v-toolbar-title>
         </v-flex>
           <v-flex md6>
           <v-layout align-center>

@@ -4,22 +4,24 @@
          <v-flex md2>
       <div>
         <v-layout>
-          <v-img src="https://alchemy-research.com/wp-content/uploads/2015/08/Background-Design-Theme-Light-Gray.jpg" height="170">
+          <v-img src="https://images-na.ssl-images-amazon.com/images/I/81mmkDRHNSL._SX425_.jpg" height="170">
           <v-avatar size="99" class="ma-3">
                  <img
                   src="~assets/aa.jpg"
                   alt="John"
                   >
           </v-avatar>
-            <p class="ma-3">Susas U.</p>
+            <p class="ml-5 font-weight-black">Nitesh poonia</p>
          </v-img>
        </v-layout>
     
          </div>
+         <v-hover v-slot:default="{ hover }">
          <v-card class="mx-auto"
-    max-width="600"
-    height="670"
-    tile>
+         :elevation="hover ? 12 : 2"
+          max-width="600"
+          height="670"
+          tile>
       <v-list>
         <v-list-item
           v-for="(items, i) in itemss"
@@ -41,13 +43,15 @@
      <p>
        <span class=" ml-6 primary--text font-weight-black">Privacy</span> <span class="font-weight-black" >&</span> <span class="primary--text font-weight-black">Terms</span></p></v-col>
          </v-card>
+         </v-hover>
          </v-flex>
          <v-flex md></v-flex>
         <v-flex md6>
             
            <v-layout column>
              <v-flex md6>
-                <v-card>
+               <v-hover v-slot:default="{ hover }">
+                <v-card :elevation="hover ? 12 : 2">
                   <v-img height="400" src="https://media.istockphoto.com/videos/backgrounds-loopable-video-id500086382?s=640x640">
                       
                 <v-row>
@@ -75,6 +79,7 @@
                 </v-row>
                   </v-img>
                </v-card>
+               </v-hover>
 
               </v-flex>
              <v-flex md6>
@@ -169,42 +174,41 @@ export default {
       items: [
         {
           id: 1,
-          name: 'Applications :',
+          name: 'Phones :',
           children: [
-            { id: 2, name: 'Calendar : app' },
-            { id: 3, name: 'Chrome : app' },
-            { id: 4, name: 'Webstorm : app' },
+            { id: 2, name: 'Iphone : 10% high' },
+            { id: 3, name: 'Asus phones : Same' },
+            { id: 4, name: 'Samsung : 15% high' },
           ],
         },
         {
           id: 5,
-          name: 'Documents :',
+          name: 'Games :',
           children: [
             {
               id: 6,
-              name: 'vuetify :',
+              name: 'FPS :',
               children: [
                 {
                   id: 7,
-                  name: 'src :',
+                  name: 'Battle Royal :',
                   children: [
-                    { id: 8, name: 'index : ts' },
-                    { id: 9, name: 'bootstrap : ts' },
+                    { id: 8, name: 'PUBG : 65 % higher' },
+                    { id: 9, name: 'Apex : 12% lower' },
                   ],
                 },
               ],
             },
             {
               id: 10,
-              name: 'material2 :',
+              name: 'Third person shooter :',
               children: [
                 {
                   id: 11,
-                  name: 'src :',
+                  name: 'Open World :',
                   children: [
-                    { id: 12, name: 'v-btn : ts' },
-                    { id: 13, name: 'v-card : ts' },
-                    { id: 14, name: 'v-window : ts' },
+                    { id: 12, name: 'GTA V : no idea' },
+                    { id: 13, name: 'Watch dogs : no idea' }
                   ],
                 },
               ],
@@ -213,43 +217,45 @@ export default {
         },
         {
           id: 15,
-          name: 'Downloads :',
+          name: 'Movies :',
           children: [
-            { id: 16, name: 'October : pdf' },
-            { id: 17, name: 'November : pdf' },
-            { id: 18, name: 'Tutorial : html' },
+            { id: 16, name: 'Endgame : Much higher than expected' },
+            { id: 17, name: 'The Beach : could have done better' },
+            { id: 18, name: 'Project X : All time best' },
           ],
         },
         {
           id: 19,
-          name: 'Videos :',
+          name: 'Shows :',
           children: [
             {
               id: 20,
-              name: 'Tutorials :',
+              name: 'Anime :',
               children: [
-                { id: 21, name: 'Basic layouts : mp4' },
-                { id: 22, name: 'Advanced techniques : mp4' },
-                { id: 23, name: 'All about app : dir' },
+                { id: 21, name: 'Naruto : Gem' },
+                { id: 22, name: 'Death Note : Must watch' },
+                { id: 23, name: 'Steins;Gate : Mind blowing' },
               ],
             },
-            { id: 24, name: 'Intro : mov' },
-            { id: 25, name: 'Conference introduction : avi' },
+            { id: 24, name: 'Breaking Bad : Perfect' },
+            { id: 25, name: 'Money Heist : all time best' },
           ],
         },
       ],
      
    itemss: [
+       
         {
           icon: 'mdi-apps',
           title: 'Dashboard',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Projects',
-          to: '/Projects'
+          icon: 'mdi-account',
+          title: 'Users',
+          to: '/user'
         },
+        
         {
           icon: 'mdi-watch',
           title: 'Leaderboard',
@@ -265,26 +271,13 @@ export default {
           title: 'Reports',
           to: '/Reports'
         },
-        {
-          icon: 'mdi-folder',
-          title: 'Statements',
-          to: '/Statements'
-        },
+        
         {
           icon: 'mdi-archive',
           title: 'Analytics',
           to: '/Analytics'
-        },
-        {
-          icon: 'mdi-anchor',
-          title: 'Expenses',
-          to: '/Expenses'
-        },
-        {
-          icon: 'mdi-xbox-controller',
-          title: 'User',
-          to: '/user'
         }
+        
       ],
       
       
