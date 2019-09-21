@@ -31,9 +31,9 @@
      </v-container>
      </v-app-bar>
     <v-content>
-      <v-container>
+    
         <nuxt />
-      </v-container>
+    
     </v-content>
    <v-footer
       :fixed="fixed"

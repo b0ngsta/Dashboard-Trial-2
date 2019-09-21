@@ -19,9 +19,9 @@
          <v-hover v-slot:default="{ hover }">
          <v-card class="mx-auto"
          :elevation="hover ? 12 : 2"
-    max-width="600"
-    height="670"
-    tile>
+          max-width="600"
+          height="670"
+          tile>
         
            <v-list>
         <v-list-item
@@ -95,9 +95,7 @@
                            <v-flex md6><v-icon class="mt-8 ml-12">mdi-dots-vertical</v-icon></v-flex>
 
                           </v-layout>
-                        
-                         
-                         <v-card-text><p class="display-2">38,196</p> <p>This week</p></v-card-text>
+                        <v-card-text><p class="display-2">38,196</p> <p>This week</p></v-card-text>
                          <v-card-actions>
                            
                           </v-card-actions>
